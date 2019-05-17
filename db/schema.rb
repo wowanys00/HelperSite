@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_05_17_164411) do
 
   create_table "users", force: :cascade do |t|
-    t.string "fistname", default: "", null: false
+    t.string "firstname", default: "", null: false
     t.string "lastname", default: "", null: false
     t.integer "age", null: false
     t.string "bio", default: "", null: false
