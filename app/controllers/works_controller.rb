@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   before_action :authenticate_user!, except: %i[show index]
-  before_action :find_work, except:[:index]
+  before_action :find_work, except:[:index,:new,:create]
 
 
   def new
@@ -25,6 +25,12 @@ class WorksController < ApplicationController
     render 'edit'
   end
   end
+
+  def destroy
+  if @work.destroy
+  redirect_to works_path
+  end
+end
 
   def index
     @works = Work.all
