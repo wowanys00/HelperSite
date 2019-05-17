@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'works/new'
+  get 'works/edit'
+  get 'works/index'
+  get 'works/show'
   devise_for :users
   resources :users, only: [:show,:index]
   root 'pages#index'
