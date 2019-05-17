@@ -3,3 +3,6 @@
 <%= @work.user.firstname %>
 
 <%= @work.user.lastname %>
+<% @work.photos.each do |x|%>
+<%= image_tag x.url%>
+    <% end %>
