@@ -1,2 +1,4 @@
-<h1>Works#edit</h1>
-<p>Find me in app/views/works/edit.html.erb</p>
+<%= form_for @work, url:work_path(@work.id) do |f| %>
+    <%= render 'works/form',f:f %>
+    <%= f.submit "Update"%>
+    <% end %>
