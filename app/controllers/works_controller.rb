@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
   before_action :authenticate_user!, except: %i[show index]
 
+
   def new
     @work = Work.new 
   end
@@ -17,12 +18,13 @@ class WorksController < ApplicationController
   end
 
   def index
+    @works = Work.all
   end
 
   def show
     @work = Work.find(params[:id])
   end
-  
+
   private
 
   def work_params
