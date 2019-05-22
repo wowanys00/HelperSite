@@ -1,13 +1,13 @@
 <%= @work.title %>
 <%= @work.body %>
 <%= @work.user.firstname %>
-
 <%= @work.user.lastname %>
 <% @work.photos.each do |x|%>
-<%= image_tag x.url%>
+<br><%= image_tag x.url, style:"width:300px;"%>
     <% end %>
     <% if current_user == @work.user %>
-   <%= link_to "Edit", edit_work_path(@work.id) %>
-
+    <%= link_to "Edit", edit_work_path(@work.id) %> 
    <%= link_to "Delete", work_path(@work.id), method: :delete %>
     <% end %>
+    <br>
+<%= @work.user.phone %>

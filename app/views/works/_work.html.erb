@@ -1,9 +1,9 @@
-<%= work.title %>
+<br><hr><%= work.title %>
 <%= work.body %>
 <%= work.user.firstname %>
-
 <%= work.user.lastname %>
 <%= work.user.phone %>
+<%= link_to "Детальніше", work_path(work.id) %>
 <% work.photos.each do |x|%>
-<%= image_tag x.url %>
+<%= image_tag x.url, style:"width:300px;"%>
     <% end %>

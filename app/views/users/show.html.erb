@@ -1,11 +1,11 @@
 <%= image_tag @user.avatar.url, style:"width:100px;" %><br>
-<%= @user.email %>
 <%= @user.firstname %>
 <%= @user.lastname %>
 <%= @user.age %>
-
 <%= @user.phone %>
 <%= link_to "Setting", edit_user_registration_path %>  <br>
+<hr>
 <%= @user.bio %>
-
+<%= @user.email %>
+<br>
 <%= @user.created_at%>
