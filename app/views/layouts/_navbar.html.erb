@@ -20,6 +20,7 @@
     <% if user_signed_in? %>
     <ul class="nav navbar-nav", class: "navbar-brand">
     <%= link_to "Profile", user_path(current_user), class: "navbar-brand" %>
+    <%= link_to "Messages", conversations_path, class: "navbar-brand"%>
     <%= link_to "Create new", new_work_path, class: "navbar-brand" %>
       <%= link_to "Logout",  destroy_user_session_path, method: :delete, class: "navbar-brand" %>
       <% else %>
