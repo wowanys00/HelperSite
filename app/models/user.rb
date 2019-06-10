@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
     has_many :works
-
+    has_many :comments, dependent: :destroy
+    
     has_many :conversations, :foreign_key => :sender_id
 end

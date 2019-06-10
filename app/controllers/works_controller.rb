@@ -27,7 +27,7 @@ class WorksController < ApplicationController
   end
 
   def destroy
-  if @work.destroy
+  if rail@work.destroy
   redirect_to works_path
   end
 end
@@ -37,6 +37,7 @@ end
   end
 
   def show
+    @comments=Comment.where(work_id: @work.id).order(created_at: :desc)
   end
 
   private
