@@ -1,0 +1,4 @@
+<%= form_for @work, url:work_path(@work.id) do |f| %>
+    <%= render 'works/form',f:f %>
+    <%= f.submit "Update"%>
+    <% end %>
