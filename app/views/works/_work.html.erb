@@ -1,9 +1,32 @@
-<br><hr><%= work.title %>
-<%= work.body %>
-<%= work.user.firstname %>
-<%= work.user.lastname %>
-<%= work.user.phone %>
-<%= link_to "Детальніше", work_path(work.id) %>
-<% work.photos.each do |x|%>
-<%= image_tag x.url, style:"width:300px;"%>
-    <% end %>
+<div class="container">
+  <div class="well">
+      <div class="media">
+      	<a class="pull-left" href="#">
+    		<% work.photos.each do |x|%>
+			<%= image_tag x.url, style:"width:300px;"%>
+			<% end %>
+  		</a>
+  		<div class="media-body">
+    		<h4 class="media-heading"><%= work.title %></h4>
+          <p class="text-right">
+          	By
+          	<%= work.user.firstname %>
+          	 
+          	<%= work.user.lastname %>
+          	</p>
+          <p><%= work.body %></p>
+          <ul class="list-inline list-unstyled">
+  			<li><span><i class="glyphicon glyphicon-phone"></i> <%= work.user.phone %> </span></li>
+            <li>|</li>
+            <span><i class="glyphicon glyphicon-comment"></i> <%= link_to "Детальніше", work_path(work.id) %></span>
+			</ul>
+       </div>
+    </div>
+  </div>
+   
+</div>
+
+
+
+
+

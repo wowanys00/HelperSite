@@ -1,11 +1,40 @@
-<%= image_tag @user.avatar.url, style:"width:100px;" %><br>
-<%= @user.firstname %>
-<%= @user.lastname %>
-<%= @user.age %>
-<%= @user.phone %>
-<%= link_to "Setting", edit_user_registration_path %>  <br>
-<hr>
-<%= @user.bio %>
-<%= @user.email %>
-<br>
-<%= @user.created_at%>
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+   <p class="text-center"> <h3>Profile info</h3></p>
+  </div>
+  <div class="col"></div>
+</div>
+<div class="row">
+  <div class="col">	
+  	<div class="container">
+      <div class="row">
+          <div class="col-4">
+              <%= image_tag @user.avatar.url, class: "rounded float-left" , style:"width:300px;" %>
+          </div>
+          <div class = "col-4">
+            <br>
+            <%= "Age:" + @user.age.to_s %>
+            <br>
+            <%= "Phone: " + @user.phone.to_s %>
+            <br>
+            <%= "About: " + @user.bio %>
+            <br>
+            <hr>
+            <%= "Email:" + @user.email %>
+            <br>
+            <%= "Registered:" + @user.created_at.to_s%>
+            <br>
+            <%= link_to "Setting", edit_user_registration_path %>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
