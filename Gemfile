@@ -41,6 +41,11 @@ gem 'devise'
 gem "paperclip", "~> 6.0.0"
 
 gem 'carrierwave', '~> 1.0'
+gem 'bootstrap', '~> 4.3.1'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'tinymce-rails'
+gem 'will_paginate', '~> 3.1.0'
+gem 'fancybox-rails'
 
 
 group :development, :test do
