@@ -10,11 +10,6 @@ context "validation" do
 
     it { should validate_presence_of(:work_id) }
 
-    #it { should validate_presence_of(:photos) }
-
-  #  it "is valid with valid attributes" do
-  #    expect(subject).to be_valid
-  #  end
 
     it "should not be valid without text" do
        subject.text = nil
