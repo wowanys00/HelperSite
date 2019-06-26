@@ -27,7 +27,7 @@ class WorksController < ApplicationController
   end
 
   def destroy
-  if rail@work.destroy
+  if @work.destroy
   redirect_to works_path
   end
 end

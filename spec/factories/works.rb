@@ -4,6 +4,6 @@ FactoryBot.define do
     title {"a"}
     body {"b"}
     #photos
-    views {228} 
+    views {"1"} 
   end
 end
